@@ -1,0 +1,23 @@
+.row{
+   
+    color: #fff;
+}
+.cards{
+    display: flex;
+    padding: 10px;
+    margin-top: -30px;
+
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+  
+
+    
+}
+.poster{
+    max-height: 180px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin: 20px;
+    
+}
