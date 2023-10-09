@@ -9,7 +9,8 @@ function LatestBanner() {
   useEffect(() => {
     Axios.get(`discover/movie?api_key=${API_KEY}&with_genres=28`).then((Response)=>{
       console.log(Response.data);
-      setMovie(Response.data.results[2])
+      const Shuffle =Math.floor(Math.random() * Response.data.results.length)
+      setMovie(Response.data.results[Shuffle])
     })
     
   }, [])
@@ -17,7 +18,7 @@ function LatestBanner() {
 
   return (
    
-    <div style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})` }}
+    <div style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})`,backgroundPositionY:'inherit' }}
      className='banner'>
         <div className="content">
         <h1 className="title">{movie.original_title

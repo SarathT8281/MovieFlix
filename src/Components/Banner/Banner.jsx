@@ -17,7 +17,7 @@ function Banner() {
 
   return (
    
-    <div style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})` }}
+    <div  style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})`,backgroundPositionY:'inherit' }}
      className='banner'>
         <div className="content">
         <h1 className="title">{movie.original_title

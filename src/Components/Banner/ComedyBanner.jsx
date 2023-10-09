@@ -9,7 +9,8 @@ function ComedyBanner() {
   useEffect(() => {
     Axios.get(`discover/tv?api_key=${API_KEY}&with_networks=213`).then((Response)=>{
       console.log(Response.data);
-      setMovie(Response.data.results[1])
+      const Shuffle =Math.floor(Math.random() * Response.data.results.length)
+      setMovie(Response.data.results[Shuffle])
     })
     
   }, [])
@@ -17,7 +18,7 @@ function ComedyBanner() {
 
   return (
    
-    <div style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})` }}
+    <div style={{ backgroundImage: `url(${imageUrl+movie.backdrop_path})`,backgroundPositionY:'inherit' }}
      className='banner'>
         <div className="content">
         <h1 className="title">{movie.original_name

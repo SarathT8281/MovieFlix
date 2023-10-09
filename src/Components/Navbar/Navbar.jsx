@@ -17,6 +17,10 @@ function Navbar() {
        <Link style={{textDecoration:'none'}} to={'/comdey'}> <li className='nav-text'>Comedy</li> </Link>
        <Link style={{textDecoration:'none'}} to={'/popular'}>  <li className='nav-text'>Popular</li>  </Link>
         </ul>
+        <div className='search'>
+          <input className='input' type="text"placeholder='Search Movies' />
+          <button className='btn-search'>Search</button>
+        </div>
 
         </div>
         </div>
